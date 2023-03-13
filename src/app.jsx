@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'preact/hooks'
 import * as Showdown from 'showdown'
 import { CodeEditor } from './components/CodeEditor'
+import { Download } from './components/Download'
 import { ResultView } from './components/ResultView'
 
 export function App() {
@@ -20,11 +21,12 @@ export function App() {
   }, [markdown])
 
   return (
-    <main id='app' className='w-full'>
+    <main id='app' className='w-full relative'>
       <section className='grid grid-cols-1 gap-8 md:grid-cols-2 h-screen p-8'>
         <CodeEditor initialMD={'# Hola, mundo.'} onChange={handleChange} />
         <ResultView html={html} />
       </section>
+      <Download text={markdown} />
     </main>
   )
 }
