@@ -21,7 +21,7 @@ export function App() {
 
   return (
     <main id='app' className='w-full'>
-      <section className='grid grid-cols-1 gap-4 md:grid-cols-2 h-screen p-4'>
+      <section className='grid grid-cols-1 gap-8 md:grid-cols-2 h-screen p-8'>
         <CodeEditor initialMD={'# Hola, mundo.'} onChange={handleChange} />
         <ResultView html={html} />
       </section>
