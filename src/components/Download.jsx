@@ -1,4 +1,4 @@
-export function Download({ text }) {
+export function Download({ text, disabled }) {
     const file = new Blob([text], {
         type: "text/markdown"
     })
@@ -6,7 +6,7 @@ export function Download({ text }) {
     return(
         <a 
             href={URL.createObjectURL(file)} download="markdown.md" 
-            className="flex items-center gap-x-2 border-2 bg-white border-black shadow-cartoon shadow-gray-800 w-fit p-4 absolute top-2 left-[50%] translate-x-[-50%]"
+            className={`${disabled ? 'pointer-events-none opacity-80' : ''} flex items-center gap-x-2 border-2 bg-white border-black shadow-cartoon shadow-gray-800 w-fit p-4 absolute z-10 top-2 left-[50%] translate-x-[-50%]`}
         >
             Download MD <Icon />
         </a>
