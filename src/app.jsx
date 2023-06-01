@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'preact/hooks'
 import * as Showdown from 'showdown'
+import { Navbar } from './components/Navbar'
 import { CodeEditor } from './components/CodeEditor'
 import { ResultView } from './components/ResultView'
 
@@ -20,8 +21,9 @@ export function App() {
   }, [markdown])
 
   return (
-    <main id='app' className='w-full relative'>
-      <section className='grid grid-cols-1 gap-4 md:grid-cols-2 h-[calc(100vh-60px)] p-4 mt-[60px]'>
+    <main id='app' className='w-full max-w-7xl mx-auto'>
+      <Navbar mdText={markdown} htmltext={html} />
+      <section className='grid grid-cols-1 gap-4 md:grid-cols-2 h-[calc(100vh-70px)] p-4'>
         <CodeEditor 
           initialMD={'# Hola, mundo.'} 
           onChange={handleChange} 
