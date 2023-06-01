@@ -10,6 +10,7 @@
     "commit": "node node_modules/miduco/src/bin.js"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.15",
     "preact": "^10.11.3",
     "showdown": "^2.1.0"
   },
