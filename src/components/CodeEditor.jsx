@@ -1,10 +1,8 @@
-export function CodeEditor({ initialMD, onChange, onFocus, onBlur }) {
+export function CodeEditor({ initialMD, onChange }) {
   return (
     <textarea
-      className="w-full h-full resize-none px-6 py-4 border-2 border-black overflow-auto shadow-cartoon shadow-gray-800"
+      className="w-full h-full resize-none p-4 border-2 border-black overflow-auto rounded-lg"
       onChange={onChange}
-      onFocus={onFocus}
-      onBlur={onBlur}
     >
       {initialMD}
     </textarea>

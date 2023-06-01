@@ -1,28 +1,41 @@
-export function Download({ text, disabled }) {
-    const file = new Blob([text], {
+import { DownloadIcon } from "./icons/DownloadIcon"
+import { Menu } from '@headlessui/react'
+
+export function Download({ mdText, htmlText }) {
+    const mdFile = new Blob([mdText], {
+        type: "text/markdown"
+    })
+
+    const htmlFile = new Blob([htmlText], {
         type: "text/markdown"
     })
 
     return(
-        <a 
-            href={URL.createObjectURL(file)} download="markdown.md" 
-            className={`${disabled ? 'pointer-events-none opacity-80' : ''} flex items-center gap-x-2 border-2
-            bg-white border-black shadow-cartoon shadow-gray-800 w-fit p-4 absolute z-10
-            top-[42%] translate-y-[-42%] translate-x-[-50%] md:top-2 left-[50%] md:translate-y-0`}
-        >
-            Download MD <Icon />
-        </a>
-    )
-}
-
-function Icon () {
-    return(
-        <svg 
-            xmlns="http://www.w3.org/2000/svg" 
-            width="1em" height="1em" 
-            viewBox="0 0 24 24"
-        >
-            <path fill="currentColor" d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7l7-7z"></path>
-        </svg>
+        <Menu>
+            <Menu.Button className={``}>
+                Download
+                <DownloadIcon />
+            </Menu.Button>
+            <Menu.Items>
+                <Menu.Item>
+                    {({active}) => (
+                        <a 
+                        href={URL.createObjectURL(mdFile)} download="document.md" 
+                    >
+                        as MD
+                    </a>
+                    )}
+                </Menu.Item>
+                <Menu.Item>
+                    {({active}) => (
+                        <a 
+                        href={URL.createObjectURL(htmlFile)} download="document.html" 
+                    >
+                        as HTML
+                    </a>
+                    )}
+                </Menu.Item>
+            </Menu.Items>
+        </Menu>
     )
 }
