@@ -3,6 +3,7 @@ import * as Showdown from 'showdown'
 import { Navbar } from './components/Navbar'
 import { CodeEditor } from './components/CodeEditor'
 import { ResultView } from './components/ResultView'
+import { Footer } from './components/Footer'
 
 export function App() {
   const [markdown, setMarkdown] = useState('# Hola, mundo.')
@@ -30,6 +31,7 @@ export function App() {
         />
         <ResultView html={html} />
       </section>
+      <Footer />
     </main>
   )
 }
