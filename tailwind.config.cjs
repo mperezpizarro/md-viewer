@@ -6,9 +6,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      boxShadow: {
-        'cartoon': "10px 10px 0 2px"
-      }
     },
   },
   plugins: [],
