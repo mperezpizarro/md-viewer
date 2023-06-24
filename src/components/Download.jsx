@@ -9,7 +9,7 @@ export function Download({ mdText, htmlText }) {
     })
 
     const htmlFile = new Blob([htmlText], {
-        type: "text/markdown"
+        type: "text/html"
     })
 
     return(
