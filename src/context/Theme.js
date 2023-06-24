@@ -1,5 +1,5 @@
 import { createContext } from "preact";
 
-const ThemeContext = createContext("style")
+const ThemeContext = createContext()
 
 export default ThemeContext
