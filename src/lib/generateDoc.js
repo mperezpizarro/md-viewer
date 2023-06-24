@@ -1,4 +1,4 @@
-import ThemeContext from "../context/theme"
+import ThemeContext from "../context/Theme"
 import themes from "./themes"
 import { useContext } from "preact/hooks"
 
