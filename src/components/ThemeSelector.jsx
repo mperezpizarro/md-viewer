@@ -23,7 +23,7 @@ export function ThemeSelector() {
                 </Menu.Item>
                 <Menu.Item className="flex items-center gap-x-2 py-1 hover:text-gray-700">
                     {({active}) => (
-                       <button className="w-full hover:text-gray-700" onClick={() => setValue("new")}>new.css</button>
+                       <button className="w-full hover:text-gray-700" onClick={() => setValue("classless")}>classless.de</button>
                     )}
                 </Menu.Item>
             </Menu.Items>
