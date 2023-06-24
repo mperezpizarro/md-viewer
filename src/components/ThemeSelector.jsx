@@ -1,6 +1,6 @@
 import { Menu } from "@headlessui/react";
 import { useContext } from "preact/hooks";
-import ThemeContext from "../context/theme";
+import ThemeContext from "../context/Theme";
 
 export function ThemeSelector() {
     const [value, setValue] = useContext(ThemeContext)

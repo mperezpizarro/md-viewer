@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'preact/hooks'
-import ThemeContext from './context/theme'
+import ThemeContext from './context/Theme'
 import * as Showdown from 'showdown'
 import { Navbar } from './components/Navbar'
 import { CodeEditor } from './components/CodeEditor'
